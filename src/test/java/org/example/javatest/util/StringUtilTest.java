@@ -12,9 +12,16 @@ public class StringUtilTest {
 
     public static void main(String[] args) {
         String res = StringUtil.repeat("hola", 3);
-        System.out.println(res);
+
+        if (!res.equals("holaholahola")) {
+            System.out.println("Error");
+            System.out.println(res);
+        }
 
         String res1 = StringUtil.repeat("hola", 1);
-        System.out.println(res1);
+        if (!res1.equals("hola")) {
+            System.out.println("Error");
+            System.out.println(res1);
+        }
     }
 }
