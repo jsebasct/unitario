@@ -12,14 +12,18 @@ public class StringUtilTest {
 
     public static void main(String[] args) {
         String res = StringUtil.repeat("hola", 3);
+        assertEquals(res, "holaholahola");
 
-        if (!res.equals("holaholahola")) {
-            throw new RuntimeException("error");
-        }
 
         String res1 = StringUtil.repeat("hola", 1);
         if (!res1.equals("hola")) {
             throw new RuntimeException("error");
+        }
+    }
+
+    private static void assertEquals(String actual, String expected) {
+        if (!actual.equals(expected)) {
+            throw new RuntimeException(actual + " no es igual a lo esperado: " + expected);
         }
     }
 }
